@@ -2,7 +2,7 @@
 
 venv=venv_tmp
 name_flag_dir=bypass_n
-server_script=server.py
+server_script=fastapi_script.py
 
 # check flag directory
 if [ ! -d $name_flag_dir ]; then
@@ -14,7 +14,7 @@ if [ ! -d $name_flag_dir ]; then
     pip install -r "requirements.txt" > /dev/null 2>&1
 
     # run fastapi/uvicorn and sleep for set up completely
-    uvicorn main:app --reload > /dev/null 2>&1 &
+    uvicorn fastapi_main:app --reload > /dev/null 2>&1 &
     sleep 3
 
     # get path from server (but first set up server)
