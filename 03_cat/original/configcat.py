@@ -11,13 +11,13 @@ class ConfigCat:
 
 
 if __name__ == "__main__":
-    # Arguments
+    # arguments
     key = "GitBypass"
     path_sdk_key = "sdk.key"
     with open(path_sdk_key, "r") as sdk_key_open:
         sdk_key = sdk_key_open.read()
 
-    # ConfigCat
+    # get and print flag from configcat
     configcat = ConfigCat(sdk_key=sdk_key)
     flag = configcat.get_flag(key=key)
     print(flag)
