@@ -23,4 +23,3 @@ Using ConfigCat
 
 ## TODO
 - descreptions
-- use `> /dev/null 2>&1`
